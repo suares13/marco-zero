@@ -32,6 +32,8 @@ Atua como um "concierge acadêmico humanizado", detectando sinais silenciosos de
   * **Especialista em Retenção Humanizada:** Foco exclusivo em escuta ativa para alunos que sinalizam cancelamento ou trancamento.
   * **Guia Visual do Studeo:** Em vez de dar respostas diretas, conduz o aluno passo a passo pela interface do AVA, criando independência tecnológica.
 
+  ![Árvore de Decisão da Lisa](./assets/arvore-lisa.png)
+
 ### 2. Consultor de Carreiras (UniCesumar)
 Focado em conversão e ancoragem vocacional, operando como um *Closer* consultivo.
 
@@ -40,6 +42,14 @@ Focado em conversão e ancoragem vocacional, operando como um *Closer* consultiv
   * **Consultoria e Quebra de Objeções:** Demonstra a matriz curricular e flexibilidade do EAD, ajustando variáveis dinâmicas de estado do lead (`course_confidence`).
   * **Foco na Venda (Anti-Desvio):** Redireciona papos fora de contexto para manter a segurança da interação.
 
+![Árvore de Decisão do Consultor](./assets/arvore-consultor.png)
+
+### Demonstrações em Tempo Real
+**Intervenção da Lisa:**
+![Demonstração da Lisa](./assets/demo-lisa.png)
+
+**Abordagem do Consultor:**
+![Demonstração do Consultor](./assets/demo-consultor.png)
 ---
 
 ## 🛡️ Privacy by Design & LGPD
