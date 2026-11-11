@@ -1,0 +1,39 @@
+{
+  "required" : [ "query" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "query" : {
+      "title" : "Query",
+      "description" : "Termo de busca baseado na dúvida do aluno",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "citationsUrl" : {
+      "title" : "Citations Url",
+      "description" : "Citations Url",
+      "const" : "",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "ragFeatureConfigId" : {
+      "title" : "RAG Feature Configuration Id",
+      "description" : "RAG Feature Configuration Id",
+      "const" : "ARFPC_1JDfj00000AvTfRGAV_0f4723d9_bb40_444a_a1e0_30f0ba9906f9",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "citationsEnabled" : {
+      "title" : "Citations Enabled",
+      "description" : "Citations Enabled",
+      "const" : false,
+      "lightning:type" : "lightning__booleanType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

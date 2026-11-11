@@ -1,0 +1,16 @@
+{
+  "required" : [ "recordId" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "recordId" : {
+      "title" : "ID do registro",
+      "description" : "O ID do registro do Salesforce para o qual obter detalhes de registro.",
+      "lightning:type" : "lightning__recordIdType",
+      "einstein:description" : "The single ID of a CRM record to get the record details for.",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BotVersion xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>v9</fullName>
+    <articleAnswersGPTEnabled>false</articleAnswersGPTEnabled>
+    <botDialogs>
+        <botSteps>
+            <botMessages>
+                <message>Oi, Eduardo! Tudo bem? Aqui é a Lisa! 👋
+
+Vi que faz 7 dias que você não acessa e o prazo do &quot;Projeto Prático de Banco de Dados Relacional&quot; acaba nesta quinta, às 23:59!
+
+Sei que é corrido, mas não desanima! A Camila (veterana de Análise e Desenvolvimento de Sistemas) destravou esse mesmo trabalho focando só 15 minutos na modelagem Entidade-Relacionamento inicial.
+
+Separei o material pra te ajudar: 🔗 https://exemplo.edu.br/material-bd-modelo
+
+Quer ajuda pra montar um plano rápido de estudos?</message>
+                <messageIdentifier>a5be879a-810a-475c-8d44-ebf551398b07</messageIdentifier>
+            </botMessages>
+            <stepIdentifier>378c7419-4b06-4b52-8dad-31d891e2af37</stepIdentifier>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <stepIdentifier>3cadf339-c377-4370-a888-a684fa0802b8</stepIdentifier>
+            <type>Wait</type>
+        </botSteps>
+        <developerName>Welcome</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>Welcome</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <botDialogs>
+        <botSteps>
+            <botMessages>
+                <message>Não consegui concluir essa resposta agora. Tente me enviar a dúvida novamente com um pouco mais de detalhe, por exemplo: qual tela você está acessando, qual opção procura ou qual mensagem apareceu.</message>
+                <messageIdentifier>5d55b0d1-dbac-462f-a546-bd8b69c7a26f</messageIdentifier>
+            </botMessages>
+            <stepIdentifier>95e8bb4b-cc5b-4295-90b8-3ba9fdee60ca</stepIdentifier>
+            <type>Message</type>
+        </botSteps>
+        <botSteps>
+            <stepIdentifier>ffbb5b1a-d245-498f-8f8c-bbc141e579d1</stepIdentifier>
+            <type>Wait</type>
+        </botSteps>
+        <developerName>Rich_Content_Error_Handling</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>Error Handler</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <botDialogs>
+        <botSteps>
+            <conversationSystemMessage>
+                <type>Transfer</type>
+            </conversationSystemMessage>
+            <stepIdentifier>5f540ffa-3066-4cb2-8025-1253f87e5078</stepIdentifier>
+            <type>SystemMessage</type>
+        </botSteps>
+        <developerName>Transfer_To_Agent</developerName>
+        <isPlaceholderDialog>false</isPlaceholderDialog>
+        <label>Transfer To Agent</label>
+        <showInFooterMenu>false</showInFooterMenu>
+    </botDialogs>
+    <citationsEnabled>false</citationsEnabled>
+    <conversationDefinitionPlanners>
+        <genAiPlannerName>UniCesumar_EAD_Success_Agent_v9</genAiPlannerName>
+    </conversationDefinitionPlanners>
+    <conversationSystemDialogs>
+        <dialog>Rich_Content_Error_Handling</dialog>
+        <type>ErrorHandling</type>
+    </conversationSystemDialogs>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>The agent instructions</description>
+        <developerName>AgentScriptInternal_agent_instructions</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Agent Instructions</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>The next topic to be visited</description>
+        <developerName>AgentScriptInternal_next_topic</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Next Topic</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Risco de evasão do aluno: low, medium, high</description>
+        <developerName>churn_risk</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Churn Risk</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Contexto detectado: information, academic, technical, financial, administrative, navigation, retention</description>
+        <developerName>student_context</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Student Context</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <conversationVariables>
+        <dataType>Text</dataType>
+        <description>Humor detectado: happy, neutral, frustrated, anxious, discouraged</description>
+        <developerName>student_mood</developerName>
+        <includeInPrompt>false</includeInPrompt>
+        <label>Student Mood</label>
+        <visibility>Internal</visibility>
+    </conversationVariables>
+    <copilotPrimaryLanguage>pt_BR</copilotPrimaryLanguage>
+    <defaultStdObjForContactIdFltrEnabled>false</defaultStdObjForContactIdFltrEnabled>
+    <entryDialog>Welcome</entryDialog>
+    <intentDisambiguationEnabled>false</intentDisambiguationEnabled>
+    <intentV3Enabled>false</intentV3Enabled>
+    <isScriptCompatibleAgent>true</isScriptCompatibleAgent>
+    <knowledgeActionEnabled>false</knowledgeActionEnabled>
+    <knowledgeFallbackEnabled>false</knowledgeFallbackEnabled>
+    <smallTalkEnabled>false</smallTalkEnabled>
+    <staticPromptsEnabled>false</staticPromptsEnabled>
+    <stopRecPrompts>false</stopRecPrompts>
+    <stopWelcomePrompts>false</stopWelcomePrompts>
+    <surfacesEnabled>false</surfacesEnabled>
+    <toneType>Casual</toneType>
+</BotVersion>

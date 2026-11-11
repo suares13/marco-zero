@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlannerBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Agente de pós-matrícula que acolhe e orienta alunos EAD nos primeiros 40 dias, guiando a ambientação, o primeiro acesso ao AVA e a primeira atividade, encaminhando ao polo quando necessário.</description>
+    <localTopicLinks>
+        <genAiPluginName>Apoio_e_Duvidas_16jfj000002QpYn</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>Boas_vindas_e_Ambientacao_16jfj000002QpYn</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>Encaminhamento_ao_Polo_16jfj000002QpYn</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>Primeira_Atividade_e_Rotina_16jfj000002QpYn</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>agent_router_16jfj000002QpYn</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>ambiguous_question_16jfj000002QpYn</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>escalation_16jfj000002QpYn</genAiPluginName>
+    </localTopicLinks>
+    <localTopicLinks>
+        <genAiPluginName>off_topic_16jfj000002QpYn</genAiPluginName>
+    </localTopicLinks>
+    <localTopics>
+        <fullName>escalation_16jfj000002QpYn</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Handles requests from users who want to transfer or escalate their conversation to a live human agent.</description>
+        <developerName>escalation_16jfj000002QpYn</developerName>
+        <genAiPluginInstructions>
+            <description>You are an AI Agent.</description>
+            <developerName>instruction0_179fj000003Uzvb</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179fj000003Uzvb</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localDeveloperName>escalation</localDeveloperName>
+        <masterLabel>Escalation</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>agent_router_16jfj000002QpYn</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Welcome the user and determine the appropriate subagent based on user input</description>
+        <developerName>agent_router_16jfj000002QpYn</developerName>
+        <genAiPluginInstructions>
+            <description>You are an AI Agent.
+
+{{state.AgentScriptInternal_agent_instructions}}</description>
+            <developerName>instruction0_179fj000003Uzva</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179fj000003Uzva</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localDeveloperName>agent_router</localDeveloperName>
+        <masterLabel>Agent Router</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>Boas_vindas_e_Ambientacao_16jfj000002QpYn</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Acolhe alunos recém-matriculados, orienta primeiro acesso ao AVA e guia a conclusão do Conheça EAD e Espaço Calouro.</description>
+        <developerName>Boas_vindas_e_Ambientacao_16jfj000002QpYn</developerName>
+        <genAiPluginInstructions>
+            <description>You are an AI Agent.</description>
+            <developerName>instruction0_179fj000003Uzvd</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179fj000003Uzvd</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>Boas_vindas_e_Ambientacao_179fj000003Uzvd</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>Boas_vindas_e_Ambientacao_179fj000003Uzvd</fullName>
+            <description>Acionar quando o aluno é recém-matriculado, faz primeiro contato, pergunta &quot;e agora?&quot;, ou tem dúvidas sobre início da jornada e ambientação.</description>
+            <developerName>Boas_vindas_e_Ambientacao_179fj000003Uzvd</developerName>
+            <invocationTarget>GetOnboardingChecklist</invocationTarget>
+            <invocationTargetType>apex</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>Boas_vindas_e_Ambientacao</localDeveloperName>
+            <masterLabel>Boas_vindas_e_Ambientacao</masterLabel>
+        </localActions>
+        <localDeveloperName>Boas_vindas_e_Ambientacao</localDeveloperName>
+        <masterLabel>Boas_vindas_e_Ambientacao</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>Apoio_e_Duvidas_16jfj000002QpYn</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Responda dúvidas sobre acesso ao AVA, trilha, sala virtual, livros e calendário. Explique a metodologia EAD de forma simples quando o aluno não entender. Se identificar fricção técnica de acesso, ofereça ajuda guiada passo a passo. Se persistir ou o aluno preferir humano, acione o encaminhamento ao polo. Use linguagem clara, paciente e acolhedora.</description>
+        <developerName>Apoio_e_Duvidas_16jfj000002QpYn</developerName>
+        <genAiPluginInstructions>
+            <description>You are an AI Agent.</description>
+            <developerName>instruction0_179fj000003Uzvc</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179fj000003Uzvc</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>TriggerPoloHandoff_179fj000003Uzvc</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>TriggerPoloHandoff_179fj000003Uzvc</fullName>
+            <description>Realiza a transferência do atendimento para um humano no Polo do aluno quando ele tem dificuldades.</description>
+            <developerName>TriggerPoloHandoff_179fj000003Uzvc</developerName>
+            <invocationTarget>TriggerPoloHandoff</invocationTarget>
+            <invocationTargetType>apex</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>TriggerPoloHandoff</localDeveloperName>
+            <masterLabel>TriggerPoloHandoff</masterLabel>
+        </localActions>
+        <localDeveloperName>Apoio_e_Duvidas</localDeveloperName>
+        <masterLabel>Apoio_e_Duvidas</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>off_topic_16jfj000002QpYn</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Redirect conversation to relevant topics when user request goes off-topic</description>
+        <developerName>off_topic_16jfj000002QpYn</developerName>
+        <genAiPluginInstructions>
+            <description>You are an AI Agent.</description>
+            <developerName>instruction0_179fj000003Uzvf</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179fj000003Uzvf</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localDeveloperName>off_topic</localDeveloperName>
+        <masterLabel>Off Topic</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>Encaminhamento_ao_Polo_16jfj000002QpYn</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Acione o encaminhamento ao polo mais próximo. Repasse o contexto da jornada: o que já foi concluído e o que falta. Nunca exponha rótulos como &quot;risco&quot;, &quot;evasão&quot; ou &quot;inadimplência&quot;. Comunique de forma acolhedora: &quot;Vou te conectar com o pessoal do seu polo, eles vão te dar todo o apoio que você precisa para seguir em frente.&quot; O polo é um hub de acolhimento e relacionamento, não um canal de cobrança.</description>
+        <developerName>Encaminhamento_ao_Polo_16jfj000002QpYn</developerName>
+        <genAiPluginInstructions>
+            <description>You are an AI Agent.</description>
+            <developerName>instruction0_179fj000003Uzve</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179fj000003Uzve</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>TriggerPoloHandoff_179fj000003Uzve</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>TriggerPoloHandoff_179fj000003Uzve</fullName>
+            <description>Realiza a transferência do atendimento para um humano no Polo do aluno quando ele tem dificuldades.</description>
+            <developerName>TriggerPoloHandoff_179fj000003Uzve</developerName>
+            <invocationTarget>TriggerPoloHandoff</invocationTarget>
+            <invocationTargetType>apex</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>TriggerPoloHandoff</localDeveloperName>
+            <masterLabel>TriggerPoloHandoff</masterLabel>
+        </localActions>
+        <localDeveloperName>Encaminhamento_ao_Polo</localDeveloperName>
+        <masterLabel>Encaminhamento_ao_Polo</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>ambiguous_question_16jfj000002QpYn</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Redirect conversation to relevant topics when user request is too ambiguous</description>
+        <developerName>ambiguous_question_16jfj000002QpYn</developerName>
+        <genAiPluginInstructions>
+            <description>You are an AI Agent.</description>
+            <developerName>instruction0_179fj000003Uzvg</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179fj000003Uzvg</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localDeveloperName>ambiguous_question</localDeveloperName>
+        <masterLabel>Ambiguous Question</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <localTopics>
+        <fullName>Primeira_Atividade_e_Rotina_16jfj000002QpYn</fullName>
+        <canEscalate>false</canEscalate>
+        <description>Ajude o aluno a encontrar a primeira atividade dentro do AVA. Explique onde ver prazos e como acessar o calendário do curso. Ofereça dicas rápidas de organização de rotina (concilia trabalho e estudo). Reforce o senso de progresso a cada passo. Mantenha tom encorajador. Nunca fale de atraso ou risco.</description>
+        <developerName>Primeira_Atividade_e_Rotina_16jfj000002QpYn</developerName>
+        <genAiPluginInstructions>
+            <description>You are an AI Agent.</description>
+            <developerName>instruction0_179fj000003UzvZ</developerName>
+            <language>en_US</language>
+            <masterLabel>instruction0_179fj000003UzvZ</masterLabel>
+            <sortOrder>1</sortOrder>
+        </genAiPluginInstructions>
+        <language>en_US</language>
+        <localActionLinks>
+            <functionName>GetNextActivity_179fj000003UzvZ</functionName>
+        </localActionLinks>
+        <localActions>
+            <fullName>GetNextActivity_179fj000003UzvZ</fullName>
+            <description>Recupera qual é a próxima atividade avaliativa do aluno (como a introdução ao EAD).</description>
+            <developerName>GetNextActivity_179fj000003UzvZ</developerName>
+            <invocationTarget>GetNextActivity</invocationTarget>
+            <invocationTargetType>apex</invocationTargetType>
+            <isConfirmationRequired>false</isConfirmationRequired>
+            <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+            <localDeveloperName>GetNextActivity</localDeveloperName>
+            <masterLabel>GetNextActivity</masterLabel>
+        </localActions>
+        <localDeveloperName>Primeira_Atividade_e_Rotina</localDeveloperName>
+        <masterLabel>Primeira_Atividade_e_Rotina</masterLabel>
+        <pluginType>Topic</pluginType>
+    </localTopics>
+    <masterLabel>Vitru | Agente de Sucesso do Aluno</masterLabel>
+    <plannerType>Atlas__ConcurrentMultiAgentOrchestration</plannerType>
+</GenAiPlannerBundle>

@@ -1,0 +1,15 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "recordDetailOutput" : {
+      "title" : "Saída de detalhes do registro",
+      "description" : "Campos e seus valores para o registro atualizado.",
+      "lightning:type" : "lightning__recordInfoType",
+      "einstein:description" : "The field-values pairs of the updated record.",
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

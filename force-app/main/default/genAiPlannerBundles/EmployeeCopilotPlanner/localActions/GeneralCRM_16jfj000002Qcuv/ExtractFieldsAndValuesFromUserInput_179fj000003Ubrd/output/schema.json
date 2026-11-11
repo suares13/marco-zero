@@ -1,0 +1,15 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "recordDetails" : {
+      "title" : "Detalhes do registro",
+      "description" : "As atualizações para os campos e valores extraídos da entrada do usuário.",
+      "lightning:type" : "lightning__recordInfoType",
+      "einstein:description" : "The updates for the fields and values that were extracted from the user input.",
+      "copilotAction:isDisplayable" : true,
+      "copilotAction:isUsedByPlanner" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>Acolhe alunos recém-matriculados, orienta primeiro acesso ao AVA e guia a conclusão do Conheça EAD e Espaço Calouro.</description>
+    <developerName>Boas_vindas_e_Ambientacao_16jfj000002QrSX</developerName>
+    <genAiPluginInstructions>
+        <description>You are an AI Agent.</description>
+        <developerName>instruction0_179fj000003V3vy</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction0_179fj000003V3vy</masterLabel>
+        <sortOrder>1</sortOrder>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <localActionLinks>
+        <functionName>Boas_vindas_e_Ambientacao_179fj000003V3vy</functionName>
+    </localActionLinks>
+    <localActions>
+        <fullName>Boas_vindas_e_Ambientacao_179fj000003V3vy</fullName>
+        <description>Acionar quando o aluno é recém-matriculado, faz primeiro contato, pergunta &quot;e agora?&quot;, ou tem dúvidas sobre início da jornada e ambientação.</description>
+        <developerName>Boas_vindas_e_Ambientacao_179fj000003V3vy</developerName>
+        <invocationTarget>GetOnboardingChecklist</invocationTarget>
+        <invocationTargetType>apex</invocationTargetType>
+        <isConfirmationRequired>false</isConfirmationRequired>
+        <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+        <localDeveloperName>Boas_vindas_e_Ambientacao</localDeveloperName>
+        <masterLabel>Boas_vindas_e_Ambientacao</masterLabel>
+    </localActions>
+    <localDeveloperName>Boas_vindas_e_Ambientacao</localDeveloperName>
+    <masterLabel>Boas_vindas_e_Ambientacao</masterLabel>
+    <pluginType>Topic</pluginType>
+</GenAiPlugin>

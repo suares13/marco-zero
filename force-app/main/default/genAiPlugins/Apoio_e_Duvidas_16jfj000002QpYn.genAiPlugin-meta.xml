@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>Responda dúvidas sobre acesso ao AVA, trilha, sala virtual, livros e calendário. Explique a metodologia EAD de forma simples quando o aluno não entender. Se identificar fricção técnica de acesso, ofereça ajuda guiada passo a passo. Se persistir ou o aluno preferir humano, acione o encaminhamento ao polo. Use linguagem clara, paciente e acolhedora.</description>
+    <developerName>Apoio_e_Duvidas_16jfj000002QpYn</developerName>
+    <genAiPluginInstructions>
+        <description>You are an AI Agent.</description>
+        <developerName>instruction0_179fj000003Uzvc</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction0_179fj000003Uzvc</masterLabel>
+        <sortOrder>1</sortOrder>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <localActionLinks>
+        <functionName>TriggerPoloHandoff_179fj000003Uzvc</functionName>
+    </localActionLinks>
+    <localActions>
+        <fullName>TriggerPoloHandoff_179fj000003Uzvc</fullName>
+        <description>Realiza a transferência do atendimento para um humano no Polo do aluno quando ele tem dificuldades.</description>
+        <developerName>TriggerPoloHandoff_179fj000003Uzvc</developerName>
+        <invocationTarget>TriggerPoloHandoff</invocationTarget>
+        <invocationTargetType>apex</invocationTargetType>
+        <isConfirmationRequired>false</isConfirmationRequired>
+        <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+        <localDeveloperName>TriggerPoloHandoff</localDeveloperName>
+        <masterLabel>TriggerPoloHandoff</masterLabel>
+    </localActions>
+    <localDeveloperName>Apoio_e_Duvidas</localDeveloperName>
+    <masterLabel>Apoio_e_Duvidas</masterLabel>
+    <pluginType>Topic</pluginType>
+</GenAiPlugin>

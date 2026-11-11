@@ -1,0 +1,28 @@
+{
+  "required" : [ "studentId" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "contextoJornada" : {
+      "title" : "contextoJornada",
+      "description" : "",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "motivo" : {
+      "title" : "motivo",
+      "description" : "",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "studentId" : {
+      "title" : "studentId",
+      "description" : "",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

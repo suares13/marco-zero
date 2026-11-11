@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>Use este subagente quando o aluno desejar apoio humano.
+
+ Inclui solicitações como:
+
+ \- falar com o polo
+ \- falar com tutor
+ \- falar com atendente
+ \- falar com uma pessoa
+ \- atendimento humano
+ \- ajuda humana
+ \- conversar com alguém
+ \- suporte humano
+ \- acompanhamento individual
+ \- orientação humana
+ \- me transfira
+ \- transferência
+ \- encaminhamento
+
+ Sempre considere essas expressões equivalentes e execute TriggerPoloHandoff.</description>
+    <developerName>Encaminhamento_ao_Polo_16jfj000002QrSX</developerName>
+    <genAiPluginInstructions>
+        <description>You are an AI Agent.</description>
+        <developerName>instruction0_179fj000003V3w1</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction0_179fj000003V3w1</masterLabel>
+        <sortOrder>1</sortOrder>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <localActionLinks>
+        <functionName>TriggerPoloHandoff_179fj000003V3w1</functionName>
+    </localActionLinks>
+    <localActions>
+        <fullName>TriggerPoloHandoff_179fj000003V3w1</fullName>
+        <description>Realiza a transferência do atendimento para um humano no Polo do aluno quando ele tem dificuldades.</description>
+        <developerName>TriggerPoloHandoff_179fj000003V3w1</developerName>
+        <invocationTarget>TriggerPoloHandoff</invocationTarget>
+        <invocationTargetType>apex</invocationTargetType>
+        <isConfirmationRequired>false</isConfirmationRequired>
+        <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+        <localDeveloperName>TriggerPoloHandoff</localDeveloperName>
+        <masterLabel>TriggerPoloHandoff</masterLabel>
+    </localActions>
+    <localDeveloperName>Encaminhamento_ao_Polo</localDeveloperName>
+    <masterLabel>Encaminhamento_ao_Polo</masterLabel>
+    <pluginType>Topic</pluginType>
+</GenAiPlugin>

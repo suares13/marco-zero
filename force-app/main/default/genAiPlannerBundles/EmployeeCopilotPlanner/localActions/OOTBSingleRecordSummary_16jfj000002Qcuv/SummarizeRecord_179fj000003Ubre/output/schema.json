@@ -1,0 +1,16 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "recordSummary" : {
+      "title" : "Resumo do registro",
+      "description" : "O resumo de rich text gerado para o registro especificado.",
+      "maxLength" : 100000,
+      "lightning:type" : "lightning__richTextType",
+      "einstein:description" : "The rich text summary that was created for the specified record.",
+      "lightning:isPII" : false,
+      "copilotAction:useHydratedPrompt" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}

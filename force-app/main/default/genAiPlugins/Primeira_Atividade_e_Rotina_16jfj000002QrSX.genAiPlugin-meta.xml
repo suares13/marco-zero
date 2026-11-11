@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>Ajude o aluno a encontrar a primeira atividade dentro do AVA. Explique onde ver prazos e como acessar o calendário do curso. Ofereça dicas rápidas de organização de rotina (concilia trabalho e estudo). Reforce o senso de progresso a cada passo. Mantenha tom encorajador. Nunca fale de atraso ou risco.</description>
+    <developerName>Primeira_Atividade_e_Rotina_16jfj000002QrSX</developerName>
+    <genAiPluginInstructions>
+        <description>You are an AI Agent.</description>
+        <developerName>instruction0_179fj000003V3w3</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction0_179fj000003V3w3</masterLabel>
+        <sortOrder>1</sortOrder>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <localActionLinks>
+        <functionName>GetNextActivity_179fj000003V3w3</functionName>
+    </localActionLinks>
+    <localActions>
+        <fullName>GetNextActivity_179fj000003V3w3</fullName>
+        <description>Recupera qual é a próxima atividade avaliativa do aluno (como a introdução ao EAD).</description>
+        <developerName>GetNextActivity_179fj000003V3w3</developerName>
+        <invocationTarget>GetNextActivity</invocationTarget>
+        <invocationTargetType>apex</invocationTargetType>
+        <isConfirmationRequired>false</isConfirmationRequired>
+        <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+        <localDeveloperName>GetNextActivity</localDeveloperName>
+        <masterLabel>GetNextActivity</masterLabel>
+    </localActions>
+    <localDeveloperName>Primeira_Atividade_e_Rotina</localDeveloperName>
+    <masterLabel>Primeira_Atividade_e_Rotina</masterLabel>
+    <pluginType>Topic</pluginType>
+</GenAiPlugin>

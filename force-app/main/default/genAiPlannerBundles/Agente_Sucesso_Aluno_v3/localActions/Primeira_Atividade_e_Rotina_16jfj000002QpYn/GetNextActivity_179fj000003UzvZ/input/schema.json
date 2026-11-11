@@ -1,0 +1,14 @@
+{
+  "required" : [ "studentId" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "studentId" : {
+      "title" : "studentId",
+      "description" : "",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

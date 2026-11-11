@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>Acione o encaminhamento ao polo mais próximo. Repasse o contexto da jornada: o que já foi concluído e o que falta. Nunca exponha rótulos como &quot;risco&quot;, &quot;evasão&quot; ou &quot;inadimplência&quot;. Comunique de forma acolhedora: &quot;Vou te conectar com o pessoal do seu polo, eles vão te dar todo o apoio que você precisa para seguir em frente.&quot; O polo é um hub de acolhimento e relacionamento, não um canal de cobrança.</description>
+    <developerName>Encaminhamento_ao_Polo_16jfj000002QpYn</developerName>
+    <genAiPluginInstructions>
+        <description>You are an AI Agent.</description>
+        <developerName>instruction0_179fj000003Uzve</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction0_179fj000003Uzve</masterLabel>
+        <sortOrder>1</sortOrder>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <localActionLinks>
+        <functionName>TriggerPoloHandoff_179fj000003Uzve</functionName>
+    </localActionLinks>
+    <localActions>
+        <fullName>TriggerPoloHandoff_179fj000003Uzve</fullName>
+        <description>Realiza a transferência do atendimento para um humano no Polo do aluno quando ele tem dificuldades.</description>
+        <developerName>TriggerPoloHandoff_179fj000003Uzve</developerName>
+        <invocationTarget>TriggerPoloHandoff</invocationTarget>
+        <invocationTargetType>apex</invocationTargetType>
+        <isConfirmationRequired>false</isConfirmationRequired>
+        <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+        <localDeveloperName>TriggerPoloHandoff</localDeveloperName>
+        <masterLabel>TriggerPoloHandoff</masterLabel>
+    </localActions>
+    <localDeveloperName>Encaminhamento_ao_Polo</localDeveloperName>
+    <masterLabel>Encaminhamento_ao_Polo</masterLabel>
+    <pluginType>Topic</pluginType>
+</GenAiPlugin>

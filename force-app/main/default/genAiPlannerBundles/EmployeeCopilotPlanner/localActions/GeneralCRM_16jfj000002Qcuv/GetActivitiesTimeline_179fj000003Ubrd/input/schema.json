@@ -1,0 +1,43 @@
+{
+  "required" : [ "recordId" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "recordId" : {
+      "title" : "ID do registro",
+      "description" : "O ID do registro do Salesforce para o qual as atividades estão sendo coletadas.",
+      "lightning:type" : "lightning__recordIdType",
+      "einstein:description" : "The ID of the requested object for which activities are to be fetched.",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "activityTypes" : {
+      "title" : "Tipos de atividade",
+      "description" : "Uma lista de tipos de atividade usada para recuperar a linha do tempo. Por exemplo, chamada, email, tarefa e evento.",
+      "items" : {
+        "lightning:type" : "lightning__textType"
+      },
+      "lightning:type" : "lightning__listType",
+      "einstein:description" : "A list of activity types used to retrieve the timeline. Type can be strictly either Call, Email, Task, Event.",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "fromDateTime" : {
+      "title" : "Data e hora de início",
+      "description" : "A data e hora de início no formato aaaa-MM-ddTHH:mm. Informações sobre fuso horário não estão incluídas.",
+      "lightning:type" : "lightning__textType",
+      "einstein:description" : "The start date and time in the format yyyy-MM-ddTHH:mm. Strictly follow this format. Timezone information is not included.",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "toDateTime" : {
+      "title" : "Data e hora de término",
+      "description" : "A data e hora de término no formato aaaa-MM-ddTHH:mm. Informações sobre fuso horário não estão incluídas.",
+      "lightning:type" : "lightning__textType",
+      "einstein:description" : "The end date and time in the format yyyy-MM-ddTHH:mm. Strictly follow this format. Timezone information is not included.",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType",
+  "lightning:textIndexed" : true
+}
