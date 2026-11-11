@@ -1,58 +1,69 @@
-# Salesforce DX Project
+# 🏆 Marco Zero: Agentes Autônomos para Retenção EAD (Agentforce)
 
-Salesforce DX is a development approach that brings source-driven development, team collaboration, and continuous integration to the Salesforce Platform. Instead of working directly in an org through a web browser, you work with metadata as source files in a local DX project, track changes in version control, and deploy through automated processes.
+> **Solução Vencedora (1º Lugar Geral) no Hackathon Vitru 2026**  
+> Desenvolvida durante uma maratona de 27 horas focada em combater o abandono acadêmico e potencializar o sucesso do estudante na educação a distância (EAD). 
 
-This project template gets you started with the tools and structure you need to build Salesforce applications using source control, scratch orgs, and the Salesforce CLI.
+Este repositório documenta a evolução e a arquitetura final da implementação de **Agentes de Inteligência Artificial Autônomos** focados em conversão e retenção humanizada.
 
-## Prerequisites
+---
 
-Before you start, make sure you have:
+## 🚀 Evolução da Arquitetura: Do Protótipo ao Salesforce
 
-- **Salesforce CLI** - Download from [developer.salesforce.com/tools/salesforcecli](https://developer.salesforce.com/tools/salesforcecli). See [Install Salesforce CLI](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_install_cli.htm) for details.
-- **VS Code with Salesforce Extension Pack** - See [Installation Instructions](https://developer.salesforce.com/docs/platform/sfvscode-extensions/guide/install.html) for details. Includes the Agentforce Vibes extension.
-- **A development org** - Sign up for a free Developer Edition org [here](https://developer.salesforce.com/signup).
-- **Dev Hub enabled** (optional, required to create scratch orgs) - You can enable Dev Hub in your development org under Setup > Dev Hub.  See [Provide Developers Access to Salesforce DX Tools](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_setup_dx_tools.htm).
+A concepção dos agentes não começou diretamente na plataforma corporativa. A engenharia de prompts e a lógica de roteamento de intenções foram iteradas em três fases tecnológicas distintas para validar a segurança e a empatia das respostas antes da integração com dados reais:
 
-## Project Structure
+1. **Fase 1: Kiro, Antigravity e Gemini:** Ideação inicial da persona "Lisa" e do "Consultor", testando limites de empatia e capacidade de seguir diretrizes estritas sem alucinar.
+2. **Fase 2: Protótipos em Python:** Codificação de roteadores de intenção (*Intent Routers*) customizados em Python, simulando o comportamento de árvores de decisão e chamadas a bases de conhecimento (RAG simulado).
+3. **Fase 3: Salesforce Agentforce (Produção):** Transposição da lógica validada em Python para a arquitetura declarativa do **Salesforce Agentforce Builder**, integrando nativamente com Service Cloud, Data Cloud e bases de conhecimento reais (`EmployeeCopilot__AnswerQuestionsWithKnowledge`).
 
-Your DX project follows this structure:
+---
 
-- **`force-app/main/default/`** - Your metadata source files live in this default package directory. You can configure additional package directories in the `sfdx-project.json` file.
-- **`config/`** - Scratch org definitions and project settings
-- **`scripts/`** - Automation scripts for common tasks
-- **`sfdx-project.json`** - Project manifest that defines package directories, namespace, API version, and other project-level settings
+## 🤖 Engenharia de Agentes (Agent Definitions)
 
-See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm).
+A solução final em produção utiliza a topologia de **Subagents** e **Roteadores de Intenção** nativos do Agentforce para garantir previsibilidade. O código fonte completo das definições (YAML) está disponível na pasta `/src/agentforce-definitions`.
 
-## Get Started
+### 1. Especialista de Sucesso do Aluno (Persona: Lisa)
+Atua como um "concierge acadêmico humanizado", detectando sinais silenciosos de evasão e intervindo proativamente.
 
-Ready to start developing? The [Get Started with Salesforce DX](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_get_started_dx.htm) guide walks you through your first project, from creating a scratch org to creating a simple Apex class or LWC to deploying your code to a sandbox.
+* **Inteligência Contextual e Guardrails:** O agente é instruído a classificar o humor do aluno (neutro, frustrado, ansioso) e o risco de evasão (*churn_risk: low, medium, high*). Em casos de desabafo extremo ou crise financeira, o sistema bloqueia respostas genéricas e direciona o fluxo para intervenção humana.
+* **Subagentes Mapeados:**
+  * **Roteador de Sucesso do Aluno:** Usa o modelo `DefaultEinsteinHyperClassifier` para despachar o contexto.
+  * **Orientador Acadêmico Didático:** Resolve dúvidas sobre MAPA, estágios e notas.
+  * **Orientador Administrativo & Financeiro:** Descomplica requerimentos e boletos.
+  * **Especialista em Retenção Humanizada:** Foco exclusivo em escuta ativa para alunos que sinalizam cancelamento ou trancamento.
+  * **Guia Visual do Studeo:** Em vez de dar respostas diretas, conduz o aluno passo a passo pela interface do AVA, criando independência tecnológica.
 
-## Common Salesforce CLI Commands
+### 2. Consultor de Carreiras (UniCesumar)
+Focado em conversão e ancoragem vocacional, operando como um *Closer* consultivo.
 
-Here are common CLI commands that you'll use the most:
+* **Lógica de Roteamento:**
+  * **Roteador Comercial:** Identifica se o foco é dúvida de carreira (`go_to_course_guidance`) ou intenção imediata de matrícula (`go_to_enrollment_intent`).
+  * **Consultoria e Quebra de Objeções:** Demonstra a matriz curricular e flexibilidade do EAD, ajustando variáveis dinâmicas de estado do lead (`course_confidence`).
+  * **Foco na Venda (Anti-Desvio):** Redireciona papos fora de contexto para manter a segurança da interação.
 
-- `sf org login web`: Authorize an org
-- `sf org open`: Open your org in a browser
-- `sf org create scratch`: Create a scratch org
-- `sf project deploy start`: Deploy metadata to your org
-- `sf project retrieve start`: Retrieve metadata from your org
-- `sf template generate <artifact>`: Scaffold new components, such as Apex classes and triggers, LWC components, Lightning apps, and more
-- `sf apex <command>`: Run Apex tests, run anonymous Apex blocks, and view logs
-- `sf data <command>`: Work with test data
-- `sf alias <command>`: Manage org aliases
-- `sf config <command>`: Configure CLI settings
+---
 
-## Use Agentforce Vibes to Build Lightning Apps
+## 🛡️ Privacy by Design & LGPD
 
-Transform your ideas into custom Lightning apps that extend CRM workflows directly in Lightning Experience. Through natural conversations with Agentforce Vibes, implement custom objects and fields, complex business logic, and dynamic UI components. See [Build a Lightning App Using Agentforce Vibes](https://developer.salesforce.com/docs/platform/einstein-for-devs/guide/lexapp-overview.html).
+A transição para o Agentforce garantiu que a execução respeitasse a LGPD desde a concepção:
+* **Minimização:** O agente acessa apenas variáveis de contexto necessárias (`@MessagingEndUser.ContactId`, `RoutableId`).
+* **Regras Estritas de Prompt (System Instructions):** Impossibilidade de solicitação de senhas, endereços físicos precisos ou geração arbitrária de links de pagamento, ancorando as consultas exclusivamente ao `rag_feature_config_id`.
 
-## Additional Resources
+---
 
-- [Agentforce Vibes Developer Guide](https://developer.salesforce.com/docs/platform/einstein-for-devs/guide/einstein-overview.html)
-- [Salesforce CLI Installation Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/)
-- [Salesforce CLI Plugin Development Guide](https://developer.salesforce.com/docs/platform/salesforce-cli-plugin/guide/conceptual-overview.html)
-- [Salesforce VS Code Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
+## 📁 Estrutura do Repositório
+
+```text
+├── docs/
+│   └── arquitetura-evolutiva.md      # Detalhes da transição de Python para Agentforce
+├── src/
+│   └── agentforce-definitions/
+│       ├── consultor-carreiras.yaml  # Código de configuração do agente de vendas
+│       └── especialista-sucesso.yaml # Código de configuração da Lisa (Retenção)
+└── assets/
+    └── [Diagramas e capturas do Agentforce Builder]
+```
+
+---
+
+*Projeto desenvolvido e arquitetado por **Victória Suares** e **Cristiano Silva**, aliando engenharia de software, inteligência artificial (Prompt Engineering & RAG) e governança de dados.*
 
