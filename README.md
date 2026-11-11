@@ -111,7 +111,7 @@ Para a Vitru em grande escala, a infraestrutura da AWS não atua apenas como hos
 O sucesso desta solução foi resultado de um esforço multidisciplinar de extrema colaboração e resiliência durante 27 horas ininterruptas:
 
 * **Engenharia de IA e Arquitetura de Agentes:** Victória Suares e Cristiano Silva
-* **Pesquisa, Negócios e Levantamento de Dados:** Yasmin Sobrinho
+* **Pesquisa, Negócios e Levantamento de Dados:** Yasmim Sobrinho
 * **Pitch e Apresentação Executiva:** Eduardo Matos
 
 ---
